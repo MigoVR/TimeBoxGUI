@@ -11,21 +11,18 @@ def window():
     win.setWindowTitle("Time Box")
 
     tpTable = QTableWidget(win) 
-    tpTable.setRowCount(3)
+    tpTable.setRowCount(7)
     tpTable.setColumnCount(1)
     tpTable.setHorizontalHeaderLabels(["Top Priorities"])
-    
-    tpTable.setGeometry(300, 50, 100, 100)
+    tpTable.setGeometry(25, 25, 200, 300)
     tpTable.show()
 
-    # Creating header labels for each portion of our time box
-    topPriorities = QtWidgets.QLabel(win) # Text label. Parameters dictates where it will be exist  
-    topPriorities.setText("Top Priorities")
-    topPriorities.move(50,50) # Change position of the label
-
-    brainDump = QtWidgets.QLabel(win)
-    brainDump.setText("Brain Dump")
-    brainDump.move(50,150)
+    bdTable = QTableWidget(win) 
+    bdTable.setRowCount(10)
+    bdTable.setColumnCount(1)
+    bdTable.setHorizontalHeaderLabels(["Brain Dump"])
+    bdTable.setGeometry(25, 350, 200, 300)
+    bdTable.show()
 
 
     win.show() # Display the window
